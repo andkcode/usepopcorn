@@ -1,70 +1,127 @@
-# Getting Started with Create React App
+# usePopcorn 🍿
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Overview
 
-## Available Scripts
+usePopcorn is a React-based movie search and watchlist application that allows users to explore movies, track watched films, and view movie statistics. The app leverages the OMDb API to fetch movie data and provides an intuitive interface for movie enthusiasts.
 
-In the project directory, you can run:
+## Features
 
-### `npm start`
+- **Movie Search**: Quickly search for movies using the OMDb API
+- **Movie Listing**: Display search results with movie posters and basic information
+- **Watched Movies Tracker**: 
+  - Add movies to your watched list
+  - View detailed statistics about watched movies
+  - Track personal ratings and movie details
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Technologies Used
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- React
+- useState and useEffect Hooks
+- OMDb API
+- CSS for styling
+- Responsive design
 
-### `npm test`
+## Getting Started
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Prerequisites
 
-### `npm run build`
+- Node.js (v14 or later)
+- npm or Yarn
+- OMDb API Key
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Installation
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+1. Clone the repository
+   ```bash
+   git clone https://github.com/your-username/usepopcorn.git
+   cd usepopcorn
+   ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+2. Install dependencies
+   ```bash
+   npm install
+   ```
 
-### `npm run eject`
+3. Create a `.env` file in the project root and add your OMDb API key
+   ```
+   REACT_APP_OMDB_API_KEY=your_api_key_here
+   ```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+4. Start the development server
+   ```bash
+   npm start
+   ```
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Project Structure
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+- `App.js`: Main application component
+- `NavBar`: Navigation bar with logo and search
+- `Main`: Primary content area
+- `Box`: Reusable collapsible container
+- `MovieList`: Displays search results
+- `WatchedMoviesList`: Shows watched movies
+- `WatchedSummary`: Provides statistics on watched movies
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+## Key Components
 
-## Learn More
+### Search Functionality
+- Real-time movie searching
+- Displays number of search results
+- Fetches data from OMDb API
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Watched Movies Tracking
+- Add movies to watched list
+- Calculate average ratings
+- Track runtime and personal ratings
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## API Integration
 
-### Code Splitting
+The app uses the OMDb API to fetch movie data:
+- Endpoint: `http://www.omdbapi.com/`
+- Fetches movie details based on search query
+- Handles loading and error states
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## State Management
 
-### Analyzing the Bundle Size
+Utilizes React's `useState` and `useEffect` hooks for:
+- Managing movie search results
+- Tracking watched movies
+- Handling loading and error states
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+## Error Handling
 
-### Making a Progressive Web App
+- Graceful error messages for API failures
+- Loading indicators during data fetch
+- Fallback UI for no search results
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## Performance Considerations
 
-### Advanced Configuration
+- Minimal re-renders using React hooks
+- Efficient state management
+- Async data fetching with error handling
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Potential Improvements
 
-### Deployment
+- Implement movie details view
+- Add ability to remove movies from watched list
+- Persistent storage (localStorage/database)
+- Implement user authentication
+- Add more detailed movie filtering
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+## Contributing
 
-### `npm run build` fails to minify
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## License
+
+Distributed under the MIT License. See `LICENSE` for more information.
+
+## Contact
+
+Email: andriiwork18@gmail.com
+
+GitHub: @andkcode.
